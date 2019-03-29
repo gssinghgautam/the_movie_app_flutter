@@ -1,4 +1,4 @@
-# the_movie_app
+# The Movie App
 
 A new flutter app for showing movies from TMDB api
 
