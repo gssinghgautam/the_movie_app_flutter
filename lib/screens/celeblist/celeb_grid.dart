@@ -67,7 +67,8 @@ class _CelebGridState extends State<CelebGrid> {
             margin: const EdgeInsets.only(left: 12.0),
             child: GridView.builder(
               controller: _scrollController,
-              //If Last Page data is loaded the return the actual size of the list otherwise increase the length of list by 1 to show a bottom loader
+              //[hasMaxReached : true] - Items of last page is loaded then return actual size of the list.
+              // Otherwise increment the list size of by to show a bottom loader.
               itemCount: state.hasMaxReached
                   ? state.celebList.length
                   : state.celebList.length + 1,
@@ -76,7 +77,7 @@ class _CelebGridState extends State<CelebGrid> {
                 childAspectRatio: Platform.isAndroid ? 0.59 : 0.54,
               ),
               itemBuilder: (BuildContext context, int index) {
-                //If Index is greater than equal to the length of the list then return Loader otherwise return actual view widget
+                //if the index is greater than equal to the length of the list then return BottomLoader for fetching more items
                 return index >= state.celebList.length
                     ? BottomLoader()
                     : MovieView(
