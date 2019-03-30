@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:the_movie_app/commonwidgets/movie_view.dart';
 import 'package:the_movie_app/models/tv/tv_show_model.dart';
 import 'package:the_movie_app/utils/constants.dart';
+import 'package:the_movie_app/utils/url_provider.dart';
 
 class TvShowScroller extends StatelessWidget {
   TvShowScroller({this.tvShows});
@@ -35,7 +36,7 @@ class TvShowScroller extends StatelessWidget {
                   id: tvShows[index].id,
                   title: tvShows[index].name,
                   posterPath: tvShows[index].posterPath != null
-                      ? "${Constants.IMAGE_BASE_URL}${tvShows[index].posterPath}"
+                      ? "$IMAGE_BASE_URL${tvShows[index].posterPath}"
                       : "https://via.placeholder.com/150",
                   onTap: (int id) =>
                       Navigator.pushNamed(context, "/tvdetails/$id"),

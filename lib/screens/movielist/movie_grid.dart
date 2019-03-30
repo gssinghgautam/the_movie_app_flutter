@@ -9,6 +9,7 @@ import 'package:the_movie_app/commonwidgets/bottom_loader.dart';
 import 'package:the_movie_app/commonwidgets/loader.dart';
 import 'package:the_movie_app/commonwidgets/movie_view.dart';
 import 'package:the_movie_app/utils/constants.dart';
+import 'package:the_movie_app/utils/url_provider.dart';
 
 class MovieGridView extends StatefulWidget {
   MovieGridView({this.type});
@@ -69,7 +70,7 @@ class _MovieGridViewState extends State<MovieGridView> {
                         id: state.movieList[index].id,
                         title: state.movieList[index].title,
                         posterPath: state.movieList[index].posterPath != null
-                            ? "${Constants.IMAGE_BASE_URL}${state.movieList[index].posterPath}"
+                            ? "$IMAGE_BASE_URL${state.movieList[index].posterPath}"
                             : "https://via.placeholder.com/150",
                         onTap: (int id) {
                           Navigator.pushNamed(context, "/details/$id");

@@ -5,6 +5,7 @@ import 'package:the_movie_app/commonwidgets/app_error_view.dart';
 import 'package:the_movie_app/commonwidgets/loader.dart';
 import 'package:the_movie_app/commonwidgets/movie_view.dart';
 import 'package:the_movie_app/utils/constants.dart';
+import 'package:the_movie_app/utils/url_provider.dart';
 
 class CelebListPage extends StatefulWidget {
   CelebListPage({this.title, this.type});
@@ -92,7 +93,7 @@ class _CelebListPageState extends State<CelebListPage> {
                             id: state.celebList[index].id,
                             title: state.celebList[index].name,
                             posterPath:
-                                "${Constants.IMAGE_BASE_URL}${state.celebList[index].profilePath}",
+                                "$IMAGE_BASE_URL${state.celebList[index].profilePath}",
                             onTap: (int id) =>
                                 Navigator.pushNamed(context, "/celebdetails/$id"),
                           );

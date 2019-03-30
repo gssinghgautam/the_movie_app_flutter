@@ -18,6 +18,7 @@ import 'package:the_movie_app/models/tvdetails/tv_show_detail_response.dart';
 import 'package:the_movie_app/repository/cache_response_provider.dart';
 import 'package:the_movie_app/utils/constants.dart';
 import 'package:the_movie_app/utils/url_provider.dart';
+import 'package:the_movie_app/utils/api_secrets.dart';
 
 class MoviesApiProvider {
   MoviesApiProvider(this.responseCache);
@@ -36,8 +37,8 @@ class MoviesApiProvider {
     if (responseCache.contains("movie_$type$page")) {
       return responseCache.get("movie_$type$page");
     } else {
-      final response = await http.get(
-          "${Constants.BASE_URL}$type?api_key=${Constants.API_KEY}&page=$page");
+      final response = await http
+          .get("$BASE_URL$MOVIE_URL$type?api_key=$TMDB_API_KEY&page=$page");
       if (response.statusCode == 200) {
         final result = MovieResponseModel.fromJson(json.decode(response.body));
         responseCache.set("movie_$type$page", result);
@@ -53,8 +54,8 @@ class MoviesApiProvider {
     if (responseCache.contains("movie_details_$id")) {
       return responseCache.get("movie_details_$id");
     } else {
-      final response = await http
-          .get("${Constants.BASE_URL}$id?api_key=${Constants.API_KEY}");
+      final response =
+          await http.get("$BASE_URL$MOVIE_URL$id?api_key=$TMDB_API_KEY");
 
       if (response.statusCode == 200) {
         final result =
@@ -72,8 +73,8 @@ class MoviesApiProvider {
     if (responseCache.contains("movie_images_$id")) {
       return responseCache.get("movie_images_$id");
     } else {
-      final response = await http
-          .get("${Constants.BASE_URL}$id/images?api_key=${Constants.API_KEY}");
+      final response =
+          await http.get("$BASE_URL$MOVIE_URL$id/images?api_key=$TMDB_API_KEY");
 
       if (response.statusCode == 200) {
         final result = MovieImagesResponse.fromJson(json.decode(response.body));
@@ -91,7 +92,7 @@ class MoviesApiProvider {
       return responseCache.get("movie_celebs_$id");
     } else {
       final response = await http
-          .get("${Constants.BASE_URL}$id/credits?api_key=${Constants.API_KEY}");
+          .get("$BASE_URL$MOVIE_URL$id/credits?api_key=$TMDB_API_KEY");
 
       if (response.statusCode == 200) {
         final result = MovieCastsResponse.fromJson(json.decode(response.body));
@@ -114,8 +115,8 @@ class MoviesApiProvider {
     if (responseCache.contains("tv_show_$type$page")) {
       return responseCache.get("tv_show_$type$page");
     } else {
-      final response = await http.get(
-          "${Constants.BASE_URL_TV}$type?api_key=${Constants.API_KEY}&page=$page");
+      final response = await http
+          .get("$BASE_URL$TV_URL$type?api_key=$TMDB_API_KEY&page=$page");
 
       if (response.statusCode == 200) {
         final result = TvShowResponseModel.fromJson(json.decode(response.body));
@@ -132,8 +133,8 @@ class MoviesApiProvider {
     if (responseCache.contains("tv_show_$id")) {
       return responseCache.get("tv_show_$id");
     } else {
-      final response = await http
-          .get("${Constants.BASE_URL_TV}$id?api_key=${Constants.API_KEY}");
+      final response =
+          await http.get("$BASE_URL$TV_URL$id?api_key=$TMDB_API_KEY");
       if (response.statusCode == 200) {
         final result =
             TvShowDetailResponse.fromJson(json.decode(response.body));
@@ -150,8 +151,8 @@ class MoviesApiProvider {
     if (responseCache.contains("tv_show_images_$id")) {
       return responseCache.get("tv_show_images_$id");
     } else {
-      final response = await http.get(
-          "${Constants.BASE_URL_TV}$id/images?api_key=${Constants.API_KEY}");
+      final response =
+          await http.get("$BASE_URL$TV_URL$id/images?api_key=$TMDB_API_KEY");
 
       if (response.statusCode == 200) {
         final result = TvImageResponse.fromJson(json.decode(response.body));
@@ -168,8 +169,8 @@ class MoviesApiProvider {
     if (responseCache.contains("casts_$id")) {
       return responseCache.get("casts_$id");
     } else {
-      final response = await http.get(
-          "${Constants.BASE_URL_TV}$id/credits?api_key=${Constants.API_KEY}");
+      final response =
+          await http.get("$BASE_URL$TV_URL$id/credits?api_key=$TMDB_API_KEY");
 
       if (response.statusCode == 200) {
         final result = TvShowCastResponse.fromJson(json.decode(response.body));
@@ -192,8 +193,8 @@ class MoviesApiProvider {
     if (responseCache.contains("celebs_$type$page")) {
       return responseCache.get("celebs_$type$page");
     } else {
-      final response = await http.get(
-          "${Constants.BASE_URL_CELBS}$type?api_key=${Constants.API_KEY}&page=$page");
+      final response = await http
+          .get("$BASE_URL$CELEB_URL$type?api_key=$TMDB_API_KEY&page=$page");
 
       if (response.statusCode == 200) {
         final result = CelebResponseModel.fromJson(json.decode(response.body));
@@ -210,8 +211,8 @@ class MoviesApiProvider {
     if (responseCache.contains("celebs_$id")) {
       return responseCache.get("celebs_$id");
     } else {
-      final response = await http
-          .get("${Constants.BASE_URL_CELBS}$id?api_key=${Constants.API_KEY}");
+      final response =
+          await http.get("$BASE_URL$CELEB_URL$id?api_key=$TMDB_API_KEY");
 
       if (response.statusCode == 200) {
         final result =
@@ -229,8 +230,8 @@ class MoviesApiProvider {
     if (responseCache.contains("celeb_images_$id")) {
       return responseCache.get("celeb_images_$id");
     } else {
-      final response = await http.get(
-          "${Constants.BASE_URL_CELBS}$id/images?api_key=${Constants.API_KEY}");
+      final response =
+          await http.get("$BASE_URL$CELEB_URL$id/images?api_key=$TMDB_API_KEY");
 
       if (response.statusCode == 200) {
         final result = CelebImagesResponse.fromJson(json.decode(response.body));
@@ -247,8 +248,8 @@ class MoviesApiProvider {
     if (responseCache.contains("celeb_movies_$id")) {
       return responseCache.get("celeb_movies_$id");
     } else {
-      final response = await http.get(
-          "${Constants.BASE_URL_CELBS}$id/movie_credits?api_key=${Constants.API_KEY}");
+      final response = await http
+          .get("$BASE_URL$CELEB_URL$id/movie_credits?api_key=$TMDB_API_KEY");
 
       if (response.statusCode == 200) {
         final result = CelebMoviesResponse.fromJson(json.decode(response.body));
@@ -265,8 +266,8 @@ class MoviesApiProvider {
     if (responseCache.contains("celeb_tv_shows_$id")) {
       return responseCache.get("celeb_tv_shows_$id");
     } else {
-      final response = await http.get(
-          "${Constants.BASE_URL_CELBS}$id/tv_credits?api_key=${Constants.API_KEY}");
+      final response = await http
+          .get("$BASE_URL$CELEB_URL$id/tv_credits?api_key=$TMDB_API_KEY");
 
       if (response.statusCode == 200) {
         final result =
@@ -289,7 +290,8 @@ class MoviesApiProvider {
     if (responseCache.contains(query)) {
       return responseCache.get(query);
     } else {
-      final response = await http.get("$SEARCH_URL&query=$query&page=$page");
+      final response = await http.get(
+          "$BASE_URL$SEARCH_URL?api_key=$TMDB_API_KEY&query=$query&page=$page");
       if (response.statusCode == 200) {
         final result = SearchResponse.fromJson(json.decode(response.body));
         responseCache.set(query, result);

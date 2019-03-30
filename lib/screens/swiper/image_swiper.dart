@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:the_movie_app/models/common/images.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:the_movie_app/utils/constants.dart';
+import 'package:the_movie_app/utils/url_provider.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class ImageSwiper extends StatelessWidget {
@@ -24,7 +25,7 @@ class ImageSwiper extends StatelessWidget {
               child: FadeInImage.memoryNetwork(
                 placeholder: kTransparentImage,
                 fadeInDuration: Duration(microseconds: 100),
-                image: "${Constants.IMAGE_BASE_URL}${image.filePath}",
+                image: "$IMAGE_BASE_URL${image.filePath}",
                 fit: BoxFit.cover,
               ),
             );

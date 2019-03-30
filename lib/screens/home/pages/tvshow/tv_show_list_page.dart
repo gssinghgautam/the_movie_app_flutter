@@ -5,6 +5,7 @@ import 'package:the_movie_app/commonwidgets/app_error_view.dart';
 import 'package:the_movie_app/commonwidgets/loader.dart';
 import 'package:the_movie_app/commonwidgets/movie_view.dart';
 import 'package:the_movie_app/utils/constants.dart';
+import 'package:the_movie_app/utils/url_provider.dart';
 
 class TvShowListPage extends StatefulWidget {
   TvShowListPage({this.title, this.type});
@@ -90,7 +91,7 @@ class _TvShowListPageState extends State<TvShowListPage> {
                             id: state.tvShowList[index].id,
                             title: state.tvShowList[index].name,
                             posterPath:
-                                "${Constants.IMAGE_BASE_URL}${state.tvShowList[index].posterPath}",
+                                "$IMAGE_BASE_URL${state.tvShowList[index].posterPath}",
                             onTap: (int id) =>
                                 Navigator.pushNamed(context, "/tvdetails/$id"),
                           );

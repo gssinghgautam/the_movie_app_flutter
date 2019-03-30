@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:the_movie_app/utils/constants.dart';
+import 'package:the_movie_app/utils/url_provider.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class ArcBannerImage extends StatelessWidget {
@@ -18,7 +19,7 @@ class ArcBannerImage extends StatelessWidget {
         child: FadeInImage.memoryNetwork(
           placeholder: kTransparentImage,
           image: imageUrl != null
-              ? "${Constants.IMAGE_BASE_URL}$imageUrl"
+              ? "$IMAGE_BASE_URL$imageUrl"
               : "https://via.placeholder.com/512",
           fit: BoxFit.cover,
           width: screenWidth,

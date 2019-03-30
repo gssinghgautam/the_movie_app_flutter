@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:the_movie_app/models/common/cast.dart';
 import 'package:the_movie_app/utils/constants.dart';
-import 'package:transparent_image/transparent_image.dart';
+import 'package:the_movie_app/utils/url_provider.dart';
 
 class ActorScroller extends StatelessWidget {
   ActorScroller({this.casts, this.onTap});
@@ -20,7 +20,7 @@ class ActorScroller extends StatelessWidget {
           children: [
             CircleAvatar(
               backgroundImage: actor.profilePath != null
-                  ? NetworkImage("${Constants.IMAGE_BASE_URL}${actor.profilePath}")
+                  ? NetworkImage("$IMAGE_BASE_URL${actor.profilePath}")
                   : AssetImage("images/user.png"),
               radius: 40.0,
             ),

@@ -1,2 +1,6 @@
-const String SEARCH_URL =
-    "https://api.themoviedb.org/3/search/multi?api_key=2409202286f08e6e7503cee0f7e52b9e";
+const String BASE_URL = "https://api.themoviedb.org/3/";
+const String MOVIE_URL = "movie/";
+const String TV_URL = "tv/";
+const String CELEB_URL = "person/";
+const String SEARCH_URL = "search/multi";
+const String IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";

@@ -8,6 +8,7 @@ import 'package:the_movie_app/commonwidgets/bottom_loader.dart';
 import 'package:the_movie_app/commonwidgets/loader.dart';
 import 'package:the_movie_app/commonwidgets/movie_view.dart';
 import 'package:the_movie_app/utils/constants.dart';
+import 'package:the_movie_app/utils/url_provider.dart';
 
 class CelebGrid extends StatefulWidget {
   CelebGrid({this.type});
@@ -82,7 +83,7 @@ class _CelebGridState extends State<CelebGrid> {
                         id: state.celebList[index].id,
                         title: state.celebList[index].name,
                         posterPath: state.celebList[index].profilePath != null
-                            ? "${Constants.IMAGE_BASE_URL}${state.celebList[index].profilePath}"
+                            ? "$IMAGE_BASE_URL${state.celebList[index].profilePath}"
                             : "https://via.placeholder.com/150",
                         onTap: (int id) =>
                             Navigator.pushNamed(context, "/celebdetails/$id"),

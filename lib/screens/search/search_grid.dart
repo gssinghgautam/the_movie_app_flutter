@@ -7,6 +7,7 @@ import 'package:the_movie_app/commonwidgets/bottom_loader.dart';
 import 'package:the_movie_app/commonwidgets/loader.dart';
 import 'package:the_movie_app/commonwidgets/movie_view.dart';
 import 'package:the_movie_app/utils/constants.dart';
+import 'package:the_movie_app/utils/url_provider.dart';
 
 class SearchGrid extends StatefulWidget {
   SearchGrid({this.query});
@@ -81,7 +82,7 @@ class _SearchGridState extends State<SearchGrid> {
                         title: state.searchList[index].title ??
                             state.searchList[index].name,
                         posterPath:
-                            "${Constants.IMAGE_BASE_URL}${state.searchList[index].posterPath}" ??
+                            "$IMAGE_BASE_URL${state.searchList[index].posterPath}" ??
                                 "https://via.placeholder.com/150",
                         onTap: (int id) {
                           switch (state.searchList[index].mediaType) {
