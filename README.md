@@ -1,5 +1,7 @@
 # The Movie App
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c6bf692c022c4b29920377a7206e8b45)](https://app.codacy.com/app/gssinghgautam/the_movie_app_flutter?utm_source=github.com&utm_medium=referral&utm_content=gssinghgautam/the_movie_app_flutter&utm_campaign=Badge_Grade_Settings)
+
 A movie app to showcase flutter UI. 
 
 ## Show some :heart: and star the repo to support the project
