@@ -2,6 +2,8 @@
 
 A movie app to showcase flutter UI. 
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/491b5e1012204b9887f6bb6f543423cf)](https://www.codacy.com/app/gssinghgautam/the_movie_app_flutter?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=gssinghgautam/the_movie_app_flutter&amp;utm_campaign=Badge_Grade)
+
 ## Show some :heart: and star the repo to support the project
 
 ## IOS Dark Screenshots
