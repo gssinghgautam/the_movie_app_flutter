@@ -5,12 +5,12 @@ A movie app to showcase flutter UI.
 ## Show some :heart: and star the repo to support the project
 
 ## IOS Dark Screenshots
-<img src="./screenshot/ios/dark/1.png" height="300em" /> <img src="./screenshot/ios/dark/2.png" height="300em" /> 
-<img src="./screenshot/ios/dark/3.png" height="300em" /> <img src="./screenshot/ios/dark/4.png" height="300em" /> 
-<img src="./screenshot/ios/dark/5.png" height="300em" /> <img src="./screenshot/ios/dark/6.png" height="300em" /> 
-<img src="./screenshot/ios/dark/7.png" height="300em" /> <img src="./screenshot/ios/dark/8.png" height="300em" />
-<img src="./screenshot/ios/dark/9.png" height="300em" /> <img src="./screenshot/ios/dark/10.png" height="300em" />
-<img src="./screenshot/ios/dark/11.png" height="300em" /> <img src="./screenshot/ios/dark/12.png" height="300em" />
+<img src="./screenshots/ios/dark/1.png" height="300em" /> <img src="./screenshots/ios/dark/2.png" height="300em" /> 
+<img src="./screenshots/ios/dark/3.png" height="300em" /> <img src="./screenshots/ios/dark/4.png" height="300em" /> 
+<img src="./screenshots/ios/dark/5.png" height="300em" /> <img src="./screenshots/ios/dark/6.png" height="300em" /> 
+<img src="./screenshots/ios/dark/7.png" height="300em" /> <img src="./screenshots/ios/dark/8.png" height="300em" />
+<img src="./screenshots/ios/dark/9.png" height="300em" /> <img src="./screenshots/ios/dark/10.png" height="300em" />
+<img src="./screenshots/ios/dark/11.png" height="300em" /> <img src="./screenshots/ios/dark/12.png" height="300em" />
 
 ## Created & Maintained By
 
