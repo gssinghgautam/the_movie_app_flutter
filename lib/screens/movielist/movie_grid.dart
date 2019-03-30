@@ -71,7 +71,7 @@ class _MovieGridViewState extends State<MovieGridView> {
                         title: state.movieList[index].title,
                         posterPath: state.movieList[index].posterPath != null
                             ? "$IMAGE_BASE_URL${state.movieList[index].posterPath}"
-                            : "https://via.placeholder.com/150",
+                            : "$PLACEHOLDER_URL_150",
                         onTap: (int id) {
                           Navigator.pushNamed(context, "/details/$id");
                         },

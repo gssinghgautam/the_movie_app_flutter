@@ -37,7 +37,7 @@ class MovieScroller extends StatelessWidget {
                   title: movies[index].title,
                   posterPath: movies[index].posterPath != null
                       ? "$IMAGE_BASE_URL${movies[index].posterPath}"
-                      : "https://via.placeholder.com/500",
+                      : "$PLACEHOLDER_URL_500",
                   onTap: (int id) =>
                       Navigator.pushNamed(context, "/details/$id"),
                 ),

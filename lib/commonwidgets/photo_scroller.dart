@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:the_movie_app/models/common/images.dart';
 import 'package:the_movie_app/screens/swiper/image_swiper.dart';
 import 'package:the_movie_app/utils/constants.dart';
+import 'package:the_movie_app/utils/url_provider.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class PhotoScroller extends StatelessWidget {
@@ -23,8 +24,8 @@ class PhotoScroller extends StatelessWidget {
           child: FadeInImage.memoryNetwork(
             placeholder: kTransparentImage,
             image: movieImage.filePath != null
-                ? "https://image.tmdb.org/t/p/w500${movieImage.filePath}"
-                : "https://via.placeholder.com/500",
+                ? "$IMAGE_BASE_URL${movieImage.filePath}"
+                : "$PLACEHOLDER_URL_500",
             fit: BoxFit.cover,
             width: 170.0,
             height: 140.0,

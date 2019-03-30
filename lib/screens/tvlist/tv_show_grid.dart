@@ -88,7 +88,7 @@ class _TvShowGridState extends State<TvShowGrid> {
                         title: state.tvShowList[index].name,
                         posterPath: state.tvShowList[index].posterPath != null
                             ? "$IMAGE_BASE_URL${state.tvShowList[index].posterPath}"
-                            : "https://via.placeholder.com/150",
+                            : "$PLACEHOLDER_URL_150",
                         onTap: (int id) =>
                             Navigator.pushNamed(context, "/tvdetails/$id"),
                       );

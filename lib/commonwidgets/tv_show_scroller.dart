@@ -37,7 +37,7 @@ class TvShowScroller extends StatelessWidget {
                   title: tvShows[index].name,
                   posterPath: tvShows[index].posterPath != null
                       ? "$IMAGE_BASE_URL${tvShows[index].posterPath}"
-                      : "https://via.placeholder.com/150",
+                      : "$PLACEHOLDER_URL_150",
                   onTap: (int id) =>
                       Navigator.pushNamed(context, "/tvdetails/$id"),
                 ),

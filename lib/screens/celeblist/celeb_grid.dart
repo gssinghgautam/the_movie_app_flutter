@@ -85,7 +85,7 @@ class _CelebGridState extends State<CelebGrid> {
                         title: state.celebList[index].name,
                         posterPath: state.celebList[index].profilePath != null
                             ? "$IMAGE_BASE_URL${state.celebList[index].profilePath}"
-                            : "https://via.placeholder.com/150",
+                            : "$PLACEHOLDER_URL_150",
                         onTap: (int id) =>
                             Navigator.pushNamed(context, "/celebdetails/$id"),
                       );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_movie_app/utils/url_provider.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class Poster extends StatelessWidget {
@@ -22,8 +23,8 @@ class Poster extends StatelessWidget {
       child: FadeInImage.memoryNetwork(
         placeholder: kTransparentImage,
         image: posterUrl != null
-            ? "https://image.tmdb.org/t/p/w500$posterUrl"
-            : "https://via.placeholder.com/512",
+            ? "$IMAGE_BASE_URL$posterUrl"
+            : "$PLACEHOLDER_URL_500",
         fit: BoxFit.cover,
         width: width,
         height: height,
