@@ -23,7 +23,7 @@ import 'package:the_movie_app/utils/api_secrets.dart';
 class MoviesApiProvider {
   MoviesApiProvider(this.responseCache);
 
-  final ResponseCache responseCache;
+  final CacheProvider responseCache;
 
   /*
    *

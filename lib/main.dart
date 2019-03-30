@@ -16,7 +16,7 @@ void main() {
 
 @immutable
 class MyApp extends StatelessWidget {
-  final ResponseCache responseCache = ResponseCache();
+  final CacheProvider responseCache = CacheProvider();
   MoviesApiProvider _apiProvider;
   Repository _repository;
 
@@ -55,32 +55,5 @@ class MyApp extends StatelessWidget {
         );
       },
     );
-
-    /*return DynamicTheme(
-      defaultBrightness: Brightness.light,
-      data: (brightness) => ThemeData(
-          primarySwatch: Colors.deepPurple,
-          brightness: brightness,
-          textTheme: TextTheme(
-            headline: TextStyle(
-                fontSize: 18.0,
-                fontWeight: FontWeight.w600,
-                color: Constants.textColor(brightness)),
-            subhead: TextStyle(
-                fontSize: 14.0,
-                fontWeight: FontWeight.w400,
-                color: Colors.deepPurpleAccent),
-          )),
-      themedWidgetBuilder: (context, theme) {
-        return MaterialApp(
-          title: 'The Movie Database',
-          debugShowCheckedModeBanner: false,
-          darkTheme: ThemeData.dark(),
-          theme: theme,
-          home: HomePage(),
-          onGenerateRoute: Routes().generateRoute().generator,
-        );
-      },
-    );*/
   }
 }

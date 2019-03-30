@@ -7,7 +7,7 @@ import 'package:the_movie_app/repository/movie_api_provider.dart';
 import 'package:the_movie_app/repository/repository.dart';
 
 class TvDetailsBloc {
-  final Repository _repository = Repository(MoviesApiProvider(ResponseCache()));
+  final Repository _repository = Repository(MoviesApiProvider(CacheProvider()));
 
   final _tvShowDetailsFetcher = PublishSubject<TvShowDetailResponse>();
   final _tvDetailsImagesFetcher = PublishSubject<TvImageResponse>();

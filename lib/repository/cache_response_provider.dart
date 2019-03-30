@@ -1,4 +1,4 @@
-class ResponseCache<T> {
+class CacheProvider<T> {
   final _cache = <String, T>{};
 
   T get(String term) => _cache[term];
