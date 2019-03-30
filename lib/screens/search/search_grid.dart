@@ -81,9 +81,9 @@ class _SearchGridState extends State<SearchGrid> {
                         id: state.searchList[index].id,
                         title: state.searchList[index].title ??
                             state.searchList[index].name,
-                        posterPath:
-                            "$IMAGE_BASE_URL${state.searchList[index].posterPath}" ??
-                                "https://via.placeholder.com/150",
+                        posterPath: state.searchList[index].posterPath != null
+                            ? "$IMAGE_BASE_URL${state.searchList[index].posterPath}"
+                            : "https://via.placeholder.com/150",
                         onTap: (int id) {
                           switch (state.searchList[index].mediaType) {
                             case "tv":
