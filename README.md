@@ -41,7 +41,7 @@ A movie app to showcase flutter UI.
 In the command terminal, run the following commands:
 
     $ git clone https://github.com/gssinghgautam/the_movie_app_flutter.git
-    $ cd whatsapp_clone_flutter/
+    $ cd the_movie_app_flutter/
     $ create a api_secret.dart file in utils package and add the TMDB api key
     $ flutter run
 
